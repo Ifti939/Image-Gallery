@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>target Attribute</title>
+</head>
+<body>
+    <div class="imgBox"><img src="./source/Ifti.jpeg" alt="myImg"></div>
+   <ul class="thumb">
+    <li><a href="./source/Ifti.jpeg" target="imgBox"><img src="./source/Ifti.jpeg" width="100px"></a></li>
+    <li><a href="./source/eleonora-gaini-0r3HJ7Gclxs-unsplash.jpg" target="imgBox"><img src="./source/eleonora-gaini-0r3HJ7Gclxs-unsplash.jpg" width="100px"></a></li>
+    <li><a href="./source/mazhar.jpg" target="imgBox"><img src="./source/mazhar.jpg" width="100px"></a></li>
+    <li><a href="./source/joseph-lee-c9qT0ZdCYgY-unsplash.jpg" target="imgBox"><img src="./source/joseph-lee-c9qT0ZdCYgY-unsplash.jpg"  width="100px"></a></li>
+    <li><a href="./source/karsten-winegeart-UkTltwY8k-o-unsplash.jpg" target="imgBox"><img src="./source/karsten-winegeart-UkTltwY8k-o-unsplash.jpg" width="100px"></a></li>
+   </ul> 
+   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $('.thumb a').click(function(e){
+            e.preventDefault();
+            $('.imgBox img').attr("src",$(this).attr('href'));
+        })
+    })
+   </script>
+</body>
+</html>
